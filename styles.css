@@ -375,6 +375,7 @@ body {
 
 .product-card img {
     border-radius: 12px;
+    overflow: hidden;
 }
 
 .product-image {
@@ -651,7 +652,7 @@ body {
     }
 }
 
-@media(max-width:620px) {
+@media(max-width:600px) {
     .announcement {
         font-size: 8px;
         padding: 9px
@@ -777,6 +778,10 @@ body {
 
     .product-image {
         aspect-ratio: 4/4.8
+    }
+
+    .product-card img {
+        border-radius: 12px;
     }
 
     .product-info h3 {
