@@ -374,7 +374,7 @@ body {
 
 
 .product-card img {
-    border-radius: 12px;
+    border-radius: 12px !important;
     overflow: hidden;
 }
 
@@ -781,7 +781,7 @@ body {
     }
 
     .product-card img {
-        border-radius: 12px;
+        border-radius: 12px !important;
     }
 
     .product-info h3 {
