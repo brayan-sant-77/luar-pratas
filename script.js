@@ -65,3 +65,32 @@ nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.title = `${STORE_NAME} — Joias para todos os dias`;
 renderProducts();
+
+
+
+const produtos = document.querySelectorAll(".product-card");
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            const produto = entrada.target;
+            const produtosDoMesmoGrupo = [
+                ...produto.parentElement.children
+            ];
+
+            const indice = produtosDoMesmoGrupo.indexOf(produto);
+            const atraso = (indice % 4) * 100;
+
+            produto.style.transitionDelay = `${atraso}ms`;
+            produto.classList.add("show");
+
+            observador.unobserve(produto);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+produtos.forEach((produto) => {
+    observador.observe(produto);
+});

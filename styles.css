@@ -371,13 +371,45 @@ body {
 
 .product-card {
     min-width: 0;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.9s ease, transform cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card.show  {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
 .product-card img {
     border-radius: 12px !important;
     overflow: hidden;
+    transition: transform 0.35s ease;
 }
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card img {
+        transition: none;
+    }
+}
+
+.product-card:hover img {
+    transform: none;
+}
+
 
 .product-image {
     position: relative;
@@ -580,6 +612,43 @@ body {
     text-align: center;
     padding: 45px;
     color: var(--muted)
+}
+
+
+/* Entrada suave do conteúdo principal */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1,
+.hero p,
+.hero-visual {
+    animation: entradaSuave 0.8s ease-out both;
+}
+
+.hero p {
+    animation-delay: 0.15s;
+}
+
+.hero-visual {
+    animation-delay: 0.25s;
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .hero h1,
+    .hero p,
+    .hero-visual {
+        animation: none;
+    }
 }
 
 @media (max-width: 900px) {
