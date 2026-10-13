@@ -5,14 +5,14 @@ const WHATSAPP_NUMBER = "5577988860629"; // SUBSTITUIR PELO NÚMERO REAL
 const STORE_NAME = "Luar Pratas"; // SUBSTITUIR PELO NOME REAL DA LOJA
 
 const products = [
-  {id:1,name:"Anel Aura",category:"aneis",label:"ANÉIS",price:"Consultar",description:"Minimalista, delicado e fácil de combinar.",image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80",tag:"MAIS QUERIDO"},
-  {id:2,name:"Colar Serena",category:"colares",label:"COLARES",price:"Consultar",description:"Um detalhe sutil para iluminar o look.",image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80",tag:"ESSENCIAL"},
-  {id:3,name:"Brincos Lumi",category:"brincos",label:"BRINCOS",price:"Consultar",description:"Leves, versáteis e cheios de personalidade.",image:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80",tag:""},
-  {id:4,name:"Pulseira Elo",category:"pulseiras",label:"PULSEIRAS",price:"Consultar",description:"Um clássico delicado para usar sempre.",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80",tag:""},
-  {id:5,name:"Anel Horizonte",category:"aneis",label:"ANÉIS",price:"Consultar",description:"Linhas limpas com um toque contemporâneo.",image:"https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=700&q=80",tag:"NOVO"},
-  {id:6,name:"Colar Constelação",category:"colares",label:"COLARES",price:"Consultar",description:"Uma peça especial para presentear ou se presentear.",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80",tag:"PRESENTE"},
-  {id:7,name:"Brincos Gota",category:"brincos",label:"BRINCOS",price:"Consultar",description:"Um formato atemporal que combina com tudo.",image:"https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=700&q=80",tag:""},
-  {id:8,name:"Pulseira Brisa",category:"pulseiras",label:"PULSEIRAS",price:"Consultar",description:"Um brilho discreto para todos os dias.",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",tag:""}
+  { id: 1, name: "Anel Aura", category: "aneis", label: "ANÉIS", price: "Consultar", description: "Minimalista, delicado e fácil de combinar.", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80", tag: "MAIS QUERIDO" },
+  { id: 2, name: "Colar Serena", category: "colares", label: "COLARES", price: "Consultar", description: "Um detalhe sutil para iluminar o look.", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80", tag: "ESSENCIAL" },
+  { id: 3, name: "Brincos Lumi", category: "brincos", label: "BRINCOS", price: "Consultar", description: "Leves, versáteis e cheios de personalidade.", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80", tag: "" },
+  { id: 4, name: "Pulseira Elo", category: "pulseiras", label: "PULSEIRAS", price: "Consultar", description: "Um clássico delicado para usar sempre.", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80", tag: "" },
+  { id: 5, name: "Anel Horizonte", category: "aneis", label: "ANÉIS", price: "Consultar", description: "Linhas limpas com um toque contemporâneo.", image: "https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=700&q=80", tag: "NOVO" },
+  { id: 6, name: "Colar Constelação", category: "colares", label: "COLARES", price: "Consultar", description: "Uma peça especial para presentear ou se presentear.", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80", tag: "PRESENTE" },
+  { id: 7, name: "Brincos Gota", category: "brincos", label: "BRINCOS", price: "Consultar", description: "Um formato atemporal que combina com tudo.", image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=700&q=80", tag: "" },
+  { id: 8, name: "Pulseira Brisa", category: "pulseiras", label: "PULSEIRAS", price: "Consultar", description: "Um brilho discreto para todos os dias.", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80", tag: "" }
 ];
 
 function whatsappUrl(message) {

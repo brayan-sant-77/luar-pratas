@@ -245,7 +245,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center 48%;
-    display: block
+    display: block;
 }
 
 .image-caption {
@@ -259,7 +259,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 8px;
-    letter-spacing: .15em
+    letter-spacing: .15em;
 }
 
 .floating-stamp {
@@ -369,7 +369,12 @@ body {
 }
 
 .product-card {
-    min-width: 0
+    min-width: 0;
+}
+
+
+.product-card img {
+    border-radius: 12px;
 }
 
 .product-image {
@@ -493,6 +498,7 @@ body {
 
 .contact-art {
     height: 400px;
+    border-radius: 8px;
     overflow: hidden
 }
 
