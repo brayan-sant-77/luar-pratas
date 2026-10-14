@@ -1,12 +1,24 @@
 :root {
-    --paper: #f8f7f4;
-    --white: #fff;
-    --ink: #252522;
-    --muted: #77766f;
-    --line: #e7e4de;
-    --silver: #c9c9c4;
+   /* Identidade visual da Luar Pratas */
+    --azul-marinho: #081632;
+    --prata: #E5E7ED;
+    --branco: #FFFFFF;
+    --branco-frio: #F5F6FA;
+
+    /* Textos e Bordas */
+    --texto-principal: #20283A;
+    --texto-secundario: #596274;
+    --borda-suave: #D9DEE8;
+
+    /* Compatibilidade com o CSS existente */
+    --paper: var(--branco-frio);
+    --ink: var(--texto-principal);
+    --muted: var(--texto-secundario);
+    --line: var(--borda-suave);
+
+    /* Fontes */
     --serif: 'Playfair Display', Georgia, serif;
-    --sans: 'DM Sans', Arial, sans-serif
+    --sans: 'DM Sans', Arial, sans-serif;
 }
 
 * {
@@ -128,8 +140,8 @@ body {
     display: none;
     border: 0;
     background: none;
-    font-size: 23px
-    margin-left 16px;
+    font-size: 23px;
+    margin-left: 16px;
 }
 
 .hero {
@@ -245,6 +257,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px 10px;
     object-position: center 48%;
     display: block;
 }
@@ -257,6 +270,7 @@ body {
     background: rgba(36, 37, 33, .72);
     color: #fff;
     padding: 13px 16px;
+    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: space-between;
     font-size: 8px;
@@ -373,7 +387,7 @@ body {
     min-width: 0;
     opacity: 0;
     transform: translateY(12px);
-    transition: opacity 0.9s ease, transform cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .product-card.show  {
@@ -406,9 +420,6 @@ body {
     }
 }
 
-.product-card:hover img {
-    transform: none;
-}
 
 
 .product-image {
@@ -921,5 +932,205 @@ body {
     *::before,
     *::after {
         transition: none !important
+    }
+}
+
+
+/* =========================================================
+   IDENTIDADE VISUAL — LUAR PRATAS
+   Aplicada sobre o layout existente
+   ========================================================= */
+
+.announcement {
+    background: var(--azul-marinho);
+    color: var(--prata);
+}
+
+.site-header {
+    background: rgba(8, 22, 50, 0.96);
+    border-bottom-color: #26344E;
+}
+
+.site-header .brand,
+.site-header .brand-name,
+.site-header .brand-name small,
+.site-header .header-cta,
+.site-header .nav-links a {
+    color: var(--branco);
+}
+
+.site-header .brand-name small {
+    color: var(--prata);
+}
+
+.site-header .brand-mark {
+    border-color: var(--prata);
+    color: var(--prata);
+}
+
+.site-header .header-cta {
+    border-bottom-color: #75819A;
+}
+
+.site-header .nav-links a:hover,
+.site-header .header-cta:hover {
+    color: var(--prata);
+}
+
+.menu-toggle {
+    color: var(--branco);
+}
+
+.hero,
+.collection,
+.contact {
+    background-color: var(--branco-frio);
+}
+
+.eyebrow,
+.hero h1 em,
+.section-heading h2 em,
+.contact h2 em {
+    color: var(--texto-secundario);
+}
+
+.eyebrow span {
+    background: #AAB3C4;
+}
+
+.button-dark {
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.button-dark:hover {
+    background: #192B4C;
+}
+
+.filter {
+    border-color: var(--borda-suave);
+    color: var(--texto-secundario);
+}
+
+.filter:hover,
+.filter.active {
+    background: var(--azul-marinho);
+    border-color: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.product-image {
+    background: var(--prata);
+    border-radius: 12px;
+}
+
+.product-image img {
+    border-radius: inherit;
+}
+
+.product-tag {
+    background: rgba(245, 246, 250, 0.95);
+    color: var(--azul-marinho);
+}
+
+.product-category,
+.catalog-note,
+.contact-copy small {
+    color: var(--texto-secundario);
+}
+
+.order-link {
+    color: var(--azul-marinho);
+    border-color: var(--borda-suave);
+}
+
+.trust-strip {
+    border-color: var(--borda-suave);
+    color: var(--texto-secundario);
+}
+
+.trust-strip span,
+.sparkle {
+    color: #8793AA;
+}
+
+.floating-stamp {
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.image-caption {
+    background: rgba(8, 22, 50, 0.78);
+    color: var(--branco);
+}
+
+.quote-section {
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.quote-section em,
+.quote-section > span,
+.quote-symbol {
+    color: var(--prata);
+}
+
+.footer {
+    background: var(--azul-marinho);
+    border-top-color: #26344E;
+    color: var(--prata);
+}
+
+.footer .brand,
+.footer .brand-name,
+.footer .brand-mark {
+    color: var(--branco);
+}
+
+.footer .brand-mark {
+    border-color: var(--prata);
+}
+
+.footer .brand-name small,
+.footer > p,
+.footer-bottom,
+.footer-bottom a {
+    color: #C1C9D8;
+}
+
+.footer-bottom {
+    border-top-color: #34415A;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        background: var(--azul-marinho);
+        border-bottom-color: #26344E;
+    }
+
+    .nav-links a {
+        color: var(--branco);
+    }
+}
+
+/* A animação não deve quebrar o arredondamento das imagens */
+.product-image {
+    overflow: hidden;
+}
+
+.product-card img {
+    display: block;
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .product-card img {
+        transition: none;
     }
 }
